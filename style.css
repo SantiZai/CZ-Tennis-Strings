@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root{
+    --color1: #3d53fa;
+    --color2: #58d69e;
+    --color3: #589dd6;
+    --color4: #66fa73;
+    --color5: #6debed;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*! HEADER */
+
+.navbar{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    /* background-image: url(media/bg2.jpg);
+    background-size: cover; */
+    background: linear-gradient(to left, #76b852, #8dc26f);;
+}
+
+.contenedor-logo{
+    width: 50%;
+}
+
+.logo{
+    margin: auto 3%;
+    width: 7vh;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px -15px rgba(0, 9, 54, 50);
+}
+
+.barra-navegacion{
+    width: 50%;
+    text-align: center;
+    margin: auto 1%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.link{
+    padding: 7px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+}
+
+.link:visited{
+
+}
+
+.portada{
+    width: 100%;
+}
+
+/*! MAIN */
+
+/*? TIPOS DE CUERDAS */
+
+.container-card{
+    max-width: 70%;
+    padding: 20px;
+    padding-bottom: 40px;
+    margin: auto;
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.card{
+    width: 300px;
+    margin: 40px 20px 20px 20px;
+    position: relative;
+    transition: all 300ms;
+}
+
+.card:hover{
+    box-shadow: 1px 1px 20px -10px rgba(20, 20, 20, 49);
+}
+
+.card:hover .imagen{
+    margin-top: -110px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.card:hover .info-description{
+    margin-top: 0;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.imagen{
+    width: 100%;
+    background: #eff3f5;
+    height: 220px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    transition: all 400ms cubic-bezier(0.5, 0, 0, 1);
+    border-radius: 20px;
+}
+
+.imagen-encordado{
+    width: 100%;
+    height: 50%;
+    transition: all 400ms cubic-bezier(0.5, 0, 0, 1);
+}
+
+.info-description{
+    width: 100%;
+    height: 220px;
+    color: #474747;
+    background: #eff3f5;
+    padding: 10px;
+    margin-top: -220px;
+    transition: all 400ms cubic-bezier(0.5, 0, 0, 1);
+    border-radius: 20px;
+}
+
+.info-description p{
+    font-size: 14px;
+    margin-top: 10px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    overflow: hidden;
+}
+
+.info-description input{
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #2196f3;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 18px;
+    box-shadow: 1px 1px 30px -5px rgba(20, 20, 20, 49);
+    transition: box-shadow 300ms;
+}
+
+.info-description input:hover{
+    box-shadow: 1px 1px 30px -5px rgba(20, 20, 20, 70);
+}
+
+/*? INFORMACION */
+
+.informacion{
+    width: 100%;
+    height: 30vh;
+}
+
+.diferenciales{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre-nosotros{
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.lista{
+    list-style: none;
+    line-height: 1.5;
+}
+
+.lista li{
+    font-family: 'Poppins', sans-serif;
+}
+
+.imagen-sobre-nosotros{
+    width: 30%;
+    text-align: center;
+}
+
+.encordando{
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px 5px rgba(20, 20, 20, 40);
+    width: 100%;
+}
+
+.ubicacion{
+    width: 100%;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ubicacion p{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*! QUERIES */
+
+@media screen and (max-width: 1200px) {
+    .diferenciales{
+        flex-direction: column;
+    }
+
+    .sobre-nosotros{
+        width: 70%;
+        justify-content: center;
+    }
+
+    .imagen-sobre-nosotros{
+        width: 50%;
+    }
+}
