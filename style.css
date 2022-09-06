@@ -21,9 +21,7 @@ html{
     justify-content: space-between;
     position: sticky;
     top: 0;
-    /* background-image: url(media/bg2.jpg);
-    background-size: cover; */
-    background: linear-gradient(to left, #76b852, #8dc26f);;
+    background: linear-gradient(to left, #76b852, #8dc26f);
 }
 
 .contenedor-logo{
@@ -54,15 +52,33 @@ html{
     color: #000;
 }
 
-.link:visited{
-
-}
-
 .portada{
     width: 100%;
 }
 
 /*! MAIN */
+
+/*? VOLVER AL INICIO */
+
+.arriba{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 90%;
+}
+
+.volver-arriba{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 20px;
+    text-align: right;
+}
+
+.flecha-arriba{
+    width: 10%;
+}
 
 /*? TIPOS DE CUERDAS */
 
@@ -80,18 +96,19 @@ html{
 
 .card{
     width: 300px;
-    margin: 40px 20px 20px 20px;
+    margin: 110px 20px 20px 20px;
     position: relative;
     transition: all 300ms;
 }
 
 .card:hover{
-    box-shadow: 1px 1px 20px -10px rgba(20, 20, 20, 49);
+    box-shadow: 0px 12px 25px -25px rgba(20, 20, 20, 49);
 }
 
 .card:hover .imagen{
     margin-top: -110px;
     border-radius: 20px 20px 0px 0px;
+    box-shadow: 0px -12px 25px -25px rgba(20, 20, 20, 49);
 }
 
 .card:hover .info-description{
@@ -143,24 +160,26 @@ html{
     -webkit-line-clamp: 5;
     line-clamp: 5;
     overflow: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
 .info-description input{
     margin-top: 20px;
     padding: 10px 15px;
-    background: #2196f3;
+    background: var(--color3);
     color: #fff;
     font-weight: 500;
     font-size: 14px;
     cursor: pointer;
     border: none;
     border-radius: 18px;
-    box-shadow: 1px 1px 30px -5px rgba(20, 20, 20, 49);
-    transition: box-shadow 300ms;
+    transition: all 300ms;
+    font-family: 'Poppins', sans-serif;
 }
 
 .info-description input:hover{
-    box-shadow: 1px 1px 30px -5px rgba(20, 20, 20, 70);
+    box-shadow: 1px 1px 20px -5px rgba(20, 20, 20, 70);
+    background: var(--color1);
 }
 
 /*? INFORMACION */
@@ -168,6 +187,7 @@ html{
 .informacion{
     width: 100%;
     height: 30vh;
+    padding-top: 60px;
 }
 
 .diferenciales{
@@ -175,21 +195,6 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.sobre-nosotros{
-    width: 30%;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.lista{
-    list-style: none;
-    line-height: 1.5;
-}
-
-.lista li{
-    font-family: 'Poppins', sans-serif;
 }
 
 .imagen-sobre-nosotros{
@@ -203,32 +208,86 @@ html{
     width: 100%;
 }
 
+.sobre-nosotros{
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.lista{
+    list-style: none;
+    line-height: 2rem;
+}
+
+.lista li{
+    font-family: 'Poppins', sans-serif;
+}
+
 .ubicacion{
     width: 100%;
     margin: 5rem auto;
     display: flex;
     justify-content: space-around;
+    text-align: center;
     gap: 5px;
 }
 
-.ubicacion p{
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
+.mapa{
+    width: 25%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+iframe{
+    height: 400px;
+}
+
+.ubicacion .mapa p{
+    text-align: center;
+    height: 20px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/*? CONTACTO */
 
 /*! QUERIES */
 
 @media screen and (max-width: 1200px) {
+    /*? INFORMACION */
+    
     .diferenciales{
         flex-direction: column;
-    }
-
-    .sobre-nosotros{
-        width: 70%;
-        justify-content: center;
+        text-align: center;
     }
 
     .imagen-sobre-nosotros{
+        width: 55%;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .sobre-nosotros{
         width: 50%;
+        margin: auto;
+    }
+
+    .lista{
+        width: 100%;
+        padding: 0px;
+    }
+
+    .ubicacion{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mapa{
+        width: 80%;
     }
 }
