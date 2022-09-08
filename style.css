@@ -61,27 +61,6 @@ html{
 
 /*! MAIN */
 
-/*? VOLVER AL INICIO */
-
-.arriba{
-    width: 10%;
-    position: sticky;
-    top: 80%;
-    transform: translateX(830%);
-}
-
-.volver-arriba{
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    padding: 20px;
-    text-align: right;
-}
-
-.flecha-arriba{
-    width: 40%;
-}
-
 /*? TIPOS DE CUERDAS */
 
 .container-card{
